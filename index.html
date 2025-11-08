@@ -4,114 +4,289 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Shahbaz | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Muhammad Shahbaz</div>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">MS</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
       <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
       </ul>
-      <div class="hamburger">
-        <span></span><span></span><span></span>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-container fade-in">
-      <div class="hero-text">
-        <h1>Hi, I'm <span>Muhammad Shahbaz</span></h1>
-        <p>Bachelor in IT | AI & ML Enthusiast | Developer | Problem Solver</p>
-        <div class="hero-skills">
-          <span><i class="fab fa-python"></i> Python</span>
-          <span><i class="fab fa-js"></i> JavaScript</span>
-          <span><i class="fas fa-database"></i> SQL</span>
-          <span><i class="fas fa-robot"></i> AI & ML</span>
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <div class="greeting">
+          <span class="wave">👋</span>
+          <span class="greeting-text">Hello, I'm</span>
         </div>
-        <a href="#projects" class="btn">View Projects</a>
+        <h1 class="hero-title">
+          <span class="highlight">Muhammad Shahbaz</span>
+        </h1>
+        <div class="typewriter-container">
+          <span class="static-text">I'm a</span>
+          <span class="typewriter" id="typewriter"></span>
+          <span class="cursor">|</span>
+        </div>
+        
+        <p class="hero-description">Passionate about crafting intelligent solutions through code. Transforming complex problems into elegant, scalable applications with AI/ML and modern web technologies.</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <i class="fas fa-code"></i>
+            <div class="stat-content">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-laptop-code"></i>
+            <div class="stat-content">
+              <span class="stat-number">8+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="stat-content">
+              <span class="stat-number">BS</span>
+              <span class="stat-label">IT Student</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+          <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+          <span class="skill-tag"><i class="fab fa-python"></i> Django</span>
+          <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+          <span class="skill-tag"><i class="fas fa-robot"></i> AI & ML</span>
+          <span class="skill-tag"><i class="fas fa-brain"></i> Deep Learning</span>
+        </div>
+        
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i>
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Scroll Down</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="Profile Picture.jpg" alt="Muhammad Shahbaz Profile Picture">
+      
+      <div class="hero-image fade-in">
+        <div class="image-container">
+          <div class="image-backdrop"></div>
+          <img src="Profile Picture.jpg" alt="Muhammad Shahbaz" class="profile-img">
+          <div class="floating-card card-1">
+            <i class="fas fa-code"></i>
+            <span>Clean Code</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-brain"></i>
+            <span>AI/ML</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fas fa-rocket"></i>
+            <span>Innovation</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section fade-in">
-    <h2>About Me</h2>
-    <p>I am a dedicated IT student and aspiring AI/ML developer. I enjoy building real-world projects, solving complex problems, and exploring new technologies. My focus areas include Python, AI, ML, Computer Vision, and Web Development.</p>
+  <section id="about">
+    <div class="section-header">
+      <h2 class="section-title fade-in">About Me</h2>
+    </div>
+    <div class="about-content fade-in">
+      <p>I am a dedicated IT student and aspiring AI/ML developer with a passion for building innovative solutions. My expertise spans across Python, artificial intelligence, machine learning, computer vision, and full-stack web development. I thrive on solving complex problems and bringing ideas to life through code.</p>
+    </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section fade-in">
-    <h2>Skills & Tools</h2>
-    <div class="skills-container">
-      <div class="skill"><i class="fab fa-python"></i> Python</div>
-      <div class="skill"><i class="fas fa-code"></i> C++</div>
-      <div class="skill"><i class="fas fa-code"></i> C#</div>
-      <div class="skill"><i class="fab fa-java"></i> Java</div>
-      <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
-      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-      <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-      <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
-      <div class="skill"><i class="fas fa-database"></i> SQLite</div>
-      <div class="skill"><i class="fas fa-project-diagram"></i> Flask</div>
-      <div class="skill"><i class="fas fa-calculator"></i> NumPy & Pandas</div>
-      <div class="skill"><i class="fas fa-camera"></i> OpenCV</div>
-      <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
+  <section id="skills">
+    <div class="section-header">
+      <h2 class="section-title fade-in">Skills & Technologies</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fab fa-java"></i>
+        <h3>Java</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-code"></i>
+        <h3>C++ / C#</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fab fa-html5"></i>
+        <h3>HTML5</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fab fa-css3-alt"></i>
+        <h3>CSS3</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-database"></i>
+        <h3>SQL</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fab fa-git-alt"></i>
+        <h3>Git</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-flask"></i>
+        <h3>Flask</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fab fa-python"></i>
+        <h3>Django</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-layer-group"></i>
+        <h3>Streamlit</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-cube"></i>
+        <h3>Gradio</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-chart-line"></i>
+        <h3>NumPy & Pandas</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-eye"></i>
+        <h3>OpenCV</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-robot"></i>
+        <h3>Machine Learning</h3>
+      </div>
+      <div class="skill-card fade-in">
+        <i class="fas fa-brain"></i>
+        <h3>Deep Learning</h3>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section fade-in">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="assets/project1.png" alt="Hair Follicle Detection System">
-        <div class="overlay">
-          <div class="tech-stack">
-            <span>Python</span>
-            <span>OpenCV</span>
-            <span>ML</span>
+  <!-- 
+    TO ADD NEW PROJECTS: 
+    1. Copy a project-card div below
+    2. Update the project-image src (use placeholder or your image URL)
+    3. Update project-tags with your technologies
+    4. Update h3 with project title
+    5. Update p with project description
+    6. Update href links for View Code and Live Demo
+  -->
+  <section id="projects">
+    <div class="section-header">
+      <h2 class="section-title fade-in">Featured Projects</h2>
+    </div>
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="project-card fade-in">
+        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&h=250&fit=crop" alt="Hair Follicle Detection" class="project-image">
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">OpenCV</span>
+            <span class="project-tag">Machine Learning</span>
+          </div>
+          <h3>Hair Follicle Detection System</h3>
+          <p>Advanced computer vision system that detects and analyzes hair follicles in real-time images using image preprocessing, segmentation algorithms, and machine learning techniques.</p>
+          <div class="project-links">
+            <a href="https://github.com/theshahbazzubair" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
           </div>
         </div>
-        <h3>Hair Follicle Detection System</h3>
-        <p>Python, OpenCV, ML — Detects and analyzes hair follicles in real-time images with preprocessing and segmentation.</p>
-        <a href="https://github.com/theshahbazzubair" target="_blank">View Code</a>
       </div>
-      <div class="project-card">
-        <img src="assets/project2.png" alt="School Result Management System">
-        <div class="overlay">
-          <div class="tech-stack">
-            <span>Flask</span>
-            <span>SQLite</span>
-            <span>HTML & CSS</span>
+
+      <!-- Project 2 -->
+      <div class="project-card fade-in">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=250&fit=crop" alt="School Management System" class="project-image">
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">SQL</span>
+            <span class="project-tag">HTML & CSS</span>
+          </div>
+          <h3>School Result Management System</h3>
+          <p>Full-stack web application for managing student records, grades, and performance analytics with an intuitive dashboard and comprehensive reporting features.</p>
+          <div class="project-links">
+            <a href="https://github.com/theshahbazzubair" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Code
+            </a>
           </div>
         </div>
-        <h3>School Result Management System</h3>
-        <p>Flask, SQLite — Manage student records, results, and analytics through a web app.</p>
-        <a href="https://github.com/theshahbazzubair" target="_blank">View Code</a>
       </div>
+
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section fade-in">
-    <h2>Contact Me</h2>
-    <div class="contact-icons">
-      <a href="mailto:theshahbazzubair@example.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/theshahbazzubair" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/theshahbazzubair" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <section id="contact">
+    <div class="section-header">
+      <h2 class="section-title fade-in">Get In Touch</h2>
+    </div>
+    <div class="contact-content fade-in">
+      <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+      <div class="social-links">
+        <a href="mailto:theshahbazzubair@gmail.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/theshahbazzubair" target="_blank" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/shahbazzubair" target="_blank" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   </section>
 
