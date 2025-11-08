@@ -1,72 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahbaz Zubair | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Shahbaz | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">Shahbaz Zubair</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Muhammad Shahbaz</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Shahbaz Zubair</span></h1>
-            <p>Bachelor in IT | AI & ML Enthusiast | Problem Solver | Developer</p>
-            <a href="#projects" class="btn">View Projects</a>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-container fade-in">
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Muhammad Shahbaz</span></h1>
+        <p>Bachelor in IT | AI & ML Enthusiast | Developer | Problem Solver</p>
+        <div class="hero-skills">
+          <span><i class="fab fa-python"></i> Python</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+          <span><i class="fas fa-database"></i> SQL</span>
+          <span><i class="fas fa-robot"></i> AI & ML</span>
         </div>
-        <div class="hero-img">
-            <img src="assets/profile.jpg" alt="Shahbaz Zubair">
+        <a href="#projects" class="btn">View Projects</a>
+      </div>
+      <div class="hero-image">
+        <img src="Profile Picture.jpg" alt="Muhammad Shahbaz Profile Picture">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I am a dedicated IT student and aspiring AI/ML developer. I enjoy building real-world projects, solving complex problems, and exploring new technologies. My focus areas include Python, AI, ML, Computer Vision, and Web Development.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section fade-in">
+    <h2>Skills & Tools</h2>
+    <div class="skills-container">
+      <div class="skill"><i class="fab fa-python"></i> Python</div>
+      <div class="skill"><i class="fas fa-code"></i> C++</div>
+      <div class="skill"><i class="fas fa-code"></i> C#</div>
+      <div class="skill"><i class="fab fa-java"></i> Java</div>
+      <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+      <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+      <div class="skill"><i class="fas fa-database"></i> SQLite</div>
+      <div class="skill"><i class="fas fa-project-diagram"></i> Flask</div>
+      <div class="skill"><i class="fas fa-calculator"></i> NumPy & Pandas</div>
+      <div class="skill"><i class="fas fa-camera"></i> OpenCV</div>
+      <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="assets/project1.png" alt="Hair Follicle Detection System">
+        <div class="overlay">
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>ML</span>
+          </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate IT student and aspiring AI/ML developer. I love building projects, solving problems, and exploring new technologies. Currently, I am working on a Hair Follicle Detection System using Python, OpenCV, and ML for real-time analysis.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="assets/project1.png" alt="Hair Follicle Detection">
-                <h3>Hair Follicle Detection System</h3>
-                <p>Python, OpenCV, ML — Detects and analyzes hair follicles in real-time images with preprocessing and segmentation.</p>
-                <a href="https://github.com/theshahbazzubair" target="_blank">View Code</a>
-            </div>
-            <div class="project-card">
-                <img src="assets/project2.png" alt="Other Project">
-                <h3>School Result Management System</h3>
-                <p>Flask, SQLite — Manage student records, results, and analytics through an interactive web app.</p>
-                <a href="https://github.com/theshahbazzubair" target="_blank">View Code</a>
-            </div>
+        <h3>Hair Follicle Detection System</h3>
+        <p>Python, OpenCV, ML — Detects and analyzes hair follicles in real-time images with preprocessing and segmentation.</p>
+        <a href="https://github.com/theshahbazzubair" target="_blank">View Code</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/project2.png" alt="School Result Management System">
+        <div class="overlay">
+          <div class="tech-stack">
+            <span>Flask</span>
+            <span>SQLite</span>
+            <span>HTML & CSS</span>
+          </div>
         </div>
-    </section>
+        <h3>School Result Management System</h3>
+        <p>Flask, SQLite — Manage student records, results, and analytics through a web app.</p>
+        <a href="https://github.com/theshahbazzubair" target="_blank">View Code</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:theshahbazzubair@example.com">theshahbazzubair@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/theshahbazzubair" target="_blank">linkedin.com/in/theshahbazzubair</a></p>
-        <p>GitHub: <a href="https://github.com/theshahbazzubair" target="_blank">github.com/theshahbazzubair</a></p>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:theshahbazzubair@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/theshahbazzubair" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/theshahbazzubair" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Shahbaz Zubair. All Rights Reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Muhammad Shahbaz. All Rights Reserved.</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
