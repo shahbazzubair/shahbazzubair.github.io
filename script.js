@@ -37,6 +37,13 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('nav')) {
+    navLinks.classList.remove('active');
+  }
+});
+
 // Smooth Scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -54,11 +61,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Typewriter Effect
 const typewriterElement = document.getElementById('typewriter');
 const texts = [
-  ' Full Stack Developer',
-  ' AI/ML Engineer',
-  ' Backend Developer',
-  ' Problem Solver',
-  ' Tech Enthusiast'
+  'Full Stack Developer',
+  'AI/ML Engineer',
+  'Backend Developer',
+  'Problem Solver',
+  'Tech Enthusiast'
 ];
 
 let textIndex = 0;
@@ -80,7 +87,6 @@ function typeWriter() {
   }
   
   if (!isDeleting && charIndex === currentText.length) {
-    // Pause at end of text
     typingSpeed = 2000;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
@@ -95,7 +101,7 @@ function typeWriter() {
 // Start typewriter effect
 setTimeout(typeWriter, 1000);
 
-// Scroll Reveal Animations
+// Scroll Reveal Animations with Intersection Observer
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -122,7 +128,6 @@ const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   
-  // Add shadow when scrolled down
   if (currentScroll > 50) {
     nav.style.boxShadow = '0 2px 10px var(--shadow)';
   } else {
@@ -155,7 +160,13 @@ function animateStats() {
   statNumbers.forEach(stat => {
     const text = stat.textContent;
     const hasPlus = text.includes('+');
+    const isBS = text === 'BS';
     const number = parseInt(text);
+    
+    if (isBS) {
+      // Keep BS as is
+      return;
+    }
     
     if (!isNaN(number)) {
       let current = 0;
@@ -179,8 +190,30 @@ if (scrollIndicator) {
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 100) {
       scrollIndicator.style.opacity = '0';
+      scrollIndicator.style.pointerEvents = 'none';
     } else {
       scrollIndicator.style.opacity = '1';
+      scrollIndicator.style.pointerEvents = 'auto';
     }
   });
 }
+
+// Prevent body scroll when mobile menu is open
+function toggleBodyScroll(disable) {
+  if (disable) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+hamburger.addEventListener('click', () => {
+  const isActive = navLinks.classList.contains('active');
+  toggleBodyScroll(!isActive);
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    toggleBodyScroll(false);
+  });
+});
