@@ -176,3 +176,123 @@ if (scrollIndicator) {
     }
   });
 }
+
+// ===== PARALLAX EFFECT FOR GRADIENT ORBS =====
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const orbs = document.querySelectorAll('.gradient-orb');
+  
+  orbs.forEach((orb, index) => {
+    const speed = 0.3 + (index * 0.1);
+    orb.style.transform = `translateY(${scrolled * speed}px)`;
+  });
+});
+
+// ===== SKILL CARDS INTERACTION =====
+const skillCards = document.querySelectorAll('.skill-card');
+
+skillCards.forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-5px) scale(1.05)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) scale(1)';
+  });
+});
+
+// ===== PROJECT CARDS HOVER EFFECT =====
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    const otherCards = Array.from(projectCards).filter(c => c !== this);
+    otherCards.forEach(c => {
+      c.style.opacity = '0.6';
+      c.style.transform = 'scale(0.98)';
+    });
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    projectCards.forEach(c => {
+      c.style.opacity = '1';
+      c.style.transform = 'scale(1)';
+    });
+  });
+});
+
+// ===== CURSOR TRAIL EFFECT (OPTIONAL - SUBTLE) =====
+let cursorTrail = [];
+const trailLength = 5;
+
+document.addEventListener('mousemove', (e) => {
+  if (window.innerWidth > 768) {
+    cursorTrail.push({x: e.clientX, y: e.clientY, time: Date.now()});
+    
+    if (cursorTrail.length > trailLength) {
+      cursorTrail.shift();
+    }
+  }
+});
+
+// ===== PRELOAD IMAGES =====
+window.addEventListener('load', () => {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+      });
+    }
+  });
+});
+
+// ===== LAZY LOADING FOR IMAGES =====
+if ('IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+        }
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+}
+
+// ===== SECTION NAVIGATION HIGHLIGHT =====
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.pageYOffset >= sectionTop - 150) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('href') === `#${current}`) {
+      item.classList.add('active');
+    }
+  });
+});
+
+// ===== CONSOLE MESSAGE =====
+console.log('%c👋 Welcome to my portfolio!', 'color: #00d4ff; font-size: 20px; font-weight: bold;');
+console.log('%cBuilt with ❤️ by Muhammad Shahbaz', 'color: #a8b2c1; font-size: 14px;');
+console.log('%cInterested in the code? Check out my GitHub!', 'color: #00d4ff; font-size: 14px;');
