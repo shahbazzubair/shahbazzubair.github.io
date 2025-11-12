@@ -198,6 +198,34 @@ nav {
   66% { transform: translate(-50px, 50px) scale(0.9); }
 }
 
+/* Navbar stays visible and hero image moves below it */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-primary);
+  z-index: 1000;
+  height: 70px; /* make sure height is fixed */
+  display: flex;
+  align-items: center;
+}
+
+/* Hero spacing so content starts below navbar */
+.hero {
+  margin-top: 70px; /* same as nav height */
+}
+
+/* On small devices increase if still overlapping */
+@media (max-width: 480px) {
+  nav {
+    height: 80px;
+  }
+  .hero {
+    margin-top: 90px;
+  }
+}
+
 .hero-container {
   max-width: 1400px;
   width: 100%;
