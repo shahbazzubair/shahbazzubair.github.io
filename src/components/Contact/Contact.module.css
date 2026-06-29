@@ -1,0 +1,103 @@
+.contactSection {
+    padding: 3rem 2rem;
+    background-color: var(--bg-primary);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 600px; /* Kept narrow for better readability */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.title span {
+    color: var(--color-accent);
+}
+
+.formWrapper {
+    background: var(--bg-nav);
+    border: 1px solid var(--border-color);
+    border-radius: 4px; /* Sharp edges */
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input, .textarea {
+    padding: 0.8rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input:focus, .textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--accent-glow); /* Glowing focus state */
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitBtn {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    padding: 1rem;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.submitBtn:hover {
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.resultMsg {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    color: var(--color-accent);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}

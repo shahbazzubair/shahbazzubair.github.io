@@ -1,0 +1,118 @@
+.skillsSection {
+    padding: 3rem 2rem; 
+    background-color: var(--bg-primary);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.title span {
+    color: var(--color-accent);
+}
+
+.categoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.category {
+    background: var(--bg-nav);
+    padding: 1.5rem; 
+    border-radius: 8px; /* Sharpened from 12px */
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease, background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.category:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.categoryTitle {
+    font-family: 'Fira Code', 'Consolas', monospace; /* Tech vibe injected */
+    font-size: 1.05rem;
+    color: var(--color-accent);
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.8rem; 
+    margin-top: auto; 
+}
+
+.skillCard {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px; /* Sharpened corners */
+    padding: 0.8rem 0.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    cursor: default;
+    text-align: center;
+}
+
+.skillCard:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px var(--btn-hover-bg);
+}
+
+.icon {
+    font-size: 1.6rem; 
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.skillCard:hover .icon {
+    color: var(--color-accent);
+}
+
+.skillCard span {
+    font-size: 0.8rem; 
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.1;
+    transition: color 0.2s ease;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .categoriesGrid {
+        grid-template-columns: 1fr; /* Stack vertically */
+    }
+    
+    .skillsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    }
+}

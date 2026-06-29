@@ -1,0 +1,170 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-nav); 
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tech-styled Logo */
+.logo {
+    font-family: 'Fira Code', 'Consolas', monospace; /* Monospace font */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.logo .bracket {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.logo .slash {
+    color: var(--color-accent);
+}
+
+.desktopMenu {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    list-style: none;
+}
+
+.desktopMenu a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem; /* Slightly smaller for a cleaner look */
+    font-weight: 500;
+    transition: color 0.2s ease, text-shadow 0.2s ease; 
+}
+
+.desktopMenu a:hover {
+    color: var(--color-accent);
+    text-shadow: 0 0 8px var(--accent-glow); 
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.themeToggle {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    color: var(--text-primary);
+}
+
+.themeToggle:hover {
+    transform: scale(1.1) rotate(15deg); /* Added a slight rotation */
+}
+
+/* Tech-styled Button */
+.cvBtn {
+    font-family: 'Fira Code', 'Consolas', monospace; /* Matches the logo */
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent) !important;
+    background: transparent;
+    border-radius: 4px; /* Sharper corners */
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.cvBtn:hover {
+    background: var(--btn-hover-bg); 
+    box-shadow: 0 0 15px var(--accent-glow); 
+    transform: translateY(-1px);
+}
+
+.menuIcon {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 72px); /* Prevents scrolling past the menu */
+    background: var(--bg-nav);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 2.5rem;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 1px solid var(--border-color);
+}
+
+.mobileMenu.open {
+    transform: translateX(0);
+}
+
+.mobileMenu a:not(.cvBtnMobile) {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.mobileMenu a:not(.cvBtnMobile):hover {
+    color: var(--color-accent);
+}
+
+.cvBtnMobile {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent) !important;
+    background: transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cvBtnMobile:hover {
+    background: var(--btn-hover-bg);
+}
+
+@media (max-width: 900px) {
+    .desktopMenu { display: none; }
+    .cvBtn { display: none; } /* Hide desktop button on mobile */
+    .menuIcon { display: block; }
+    .navContainer { padding: 1rem 1.5rem; }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Hair Follicle Detection System",
+    "description": "A full-stack telemedicine platform built with React, FastAPI, and MongoDB. Enables remote patient-doctor interaction with automated scalp analysis using computer vision and CNN-based models following the Hamilton-Norwood scale.",
+    "tags": ["FastAPI", "ReactJS", "CNN/VGG19", "MongoDB", "OpenCV"],
+    "github": "https://github.com/shahbazzubair/hair-follicle-detection-system",
+    "demo": "#"
+  },
+  {
+    "id": 2,
+    "title": "Personal Portfolio",
+    "description": "A high-performance professional hub engineered with React and Vite. Features a modular UI, JSON-driven content management, and a serverless contact system via Web3Forms for seamless communication.",
+    "tags": ["ReactJS", "Vite", "Modern CSS", "Web3Forms"],
+    "github": "https://github.com/shahbazzubair/shahbazzubair.github.io",
+    "demo": "https://shahbazzubair.github.io/"
+  },
+  {
+    "id": 3,
+    "title": "ERP Inventory System",
+    "description": "A full-stack inventory and sales management system built with React and FastAPI. Designed to handle suppliers, stock tracking, and authentication with a focus on scalable backend architecture.",
+    "tags": ["ReactJS", "FastAPI", "SQLAlchemy", "JWT"],
+    "github": "https://github.com/shahbazzubair/inventory-erp",
+    "demo": "#"
+  }
+]

@@ -1,0 +1,39 @@
+/* Import fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Default Theme (Light Mode) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-nav: rgba(255, 255, 255, 0.85);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --color-accent: #2563eb; /* Stronger, deeper blue for better contrast */
+  --accent-glow: rgba(37, 99, 235, 0.4); /* Stronger glow */
+  --btn-hover-bg: rgba(37, 99, 235, 0.1); /* Dynamic hover background */
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --bg-primary: #0f172a;
+  --bg-nav: rgba(15, 23, 42, 0.85);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --color-accent: #00e5ff; /* Cyan */
+  --accent-glow: rgba(0, 229, 255, 0.6); /* Boosted glow for intense pop */
+  --btn-hover-bg: rgba(0, 229, 255, 0.15); /* Dynamic hover background */
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
