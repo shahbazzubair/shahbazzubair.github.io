@@ -1,4 +1,4 @@
-# Muhammad Shahbaz | Software Engineer Portfolio
+# Muhammad Shahbaz | Portfolio
 
 > **System Initialized:** A high-performance, modular personal portfolio engineered with React and Vite.
 
